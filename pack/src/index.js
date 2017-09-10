@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const sizeOf = require('object-sizeof');
 const efrt = require('efrt');
 const keyValue = require('./key-value');
+const uglify = require('./uglify-code');
 
 const filesize = function(obj) {
   return sizeOf(obj) / 1000;
@@ -24,12 +25,9 @@ const packobj = function(obj) {
   }
 
   if (obj.postProcess) {
-    var str = jsfn.stringify(obj.postProcess);
-    console.log(str);
-    obj.postProcess = uglify(str);
+    obj.postProcess = uglify(obj.postProcess);
   }
-  console.log(obj);
-  // return JSON.stringify(obj, null, 2);
+  return JSON.stringify(obj, null, 2);
 };
 
 module.exports = packobj;

@@ -14,4 +14,6 @@ let add = function(first, second) {
   }
   return first + second;
 };
-console.log(uglify(add));
+// console.log(uglify(add));
+
+module.exports = uglify;

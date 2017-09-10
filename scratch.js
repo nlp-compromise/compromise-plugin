@@ -1,4 +1,5 @@
-const pack = require('./src');
+const pack = require('./pack/src');
+const unpack = require('./unpack/src');
 
 var plugin = {
   words: {
@@ -23,4 +24,5 @@ var plugin = {
   }
 };
 
-console.log(pack(plugin));
+let str = pack(plugin);
+console.log(unpack(str));
