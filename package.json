@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "\"node_modules/.bin/tape\" \"./test/**/*.test.js\" | \"node_modules/.bin/tap-spec\" --color"
+    "test": "\"node_modules/.bin/tape\" \"./tests/**/*.test.js\" | \"node_modules/.bin/tap-spec\" --color"
   },
   "devDependencies": {
     "compromise": "^10.7.2",
