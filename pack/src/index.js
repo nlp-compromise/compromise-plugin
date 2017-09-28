@@ -8,7 +8,11 @@ const filesize = function(obj) {
   return sizeOf(obj) / 1000;
 };
 
-const packobj = function(obj) {
+const packobj = function(input) {
+  var obj = input
+  // if (typeof input === 'string') {
+  //   obj = eval('(' + input + ')');
+  // }
   obj = obj || {};
 
   let init = filesize(obj);

@@ -9,9 +9,7 @@
   },
   "main": "./src/index.js",
   "scripts": {},
-  "dependencies": {
-    "jsonfn": "^0.31.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "efrt-unpack": "^1.1.3"
   },

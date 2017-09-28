@@ -1,0 +1,25 @@
+{
+  "name": "fun",
+  "words": {
+    "brontosaurus": "Dinosaur",
+    "trex": "Dinosaur"
+  },
+  "tags": {
+    "Dinosaur": {
+      "isA": "Animal"
+    },
+    "Animal": {
+      "isA": "Noun"
+    }
+  },
+  "regex": {
+    ".osaurus$": "Dinosaur",
+    "uuu+": "Exaggeration"
+  },
+  "plurals": {
+    "horse": "horses",
+    "fly": "flies",
+    "jeep": "jeeps",
+    "one": "one"
+  }
+}

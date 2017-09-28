@@ -32,7 +32,7 @@ var plugin = {
 };
 
 let obj = pack(plugin);
-// console.log(obj)
+console.log(obj)
 
 let p2 = unpack(obj)
 console.log(JSON.stringify(p2, null, 2))
