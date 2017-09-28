@@ -15,7 +15,7 @@ var fileSize = function(src) {
   return (stats['size'] / 1000.0).toFixed(2);
 };
 
-console.log(chalk.yellow(' 🕑 creating es5 build..'));
+console.log(chalk.yellow(' 🕑 creating unpack build..'));
 
 var banner = '/* compromise-unpack v' + pkg.version + '\n   github.com/nlp-compromise/compromise-unpack\n   MIT\n*/\n';
 
@@ -24,4 +24,4 @@ cmd += ' | ' + derequire;
 cmd += ' >> ' + es5;
 exec(cmd);
 
-console.log(chalk.green(' done!    es5min ' + fileSize(es5) + 'k\n'));
+console.log(chalk.green(' done unpack build.    es5 ' + fileSize(es5) + 'k\n'));

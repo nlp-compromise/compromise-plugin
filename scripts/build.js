@@ -15,7 +15,7 @@ var fileSize = function(src) {
   return (stats['size'] / 1000.0).toFixed(2);
 };
 
-console.log(chalk.yellow(' 🕑 creating es5 build..'));
+console.log(chalk.yellow(' 🕑 creating full build..'));
 
 var banner = '/* compromise-plugin v' + pkg.version + '\n   github.com/nlp-compromise/compromise-plugin\n   MIT\n*/\n';
 
@@ -57,6 +57,9 @@ var result = UglifyJS.minify(es5, {
     warnings: true // warn about potentially dangerous optimizations/code
   }
 });
+console.log(result)
 fs.writeFileSync(es5min, result.code);
 
-console.log(chalk.green(' done!    es5min ' + fileSize(es5min) + 'k\n'));
+console.log(chalk.green(' done full build!    es5min ' + fileSize(es5min) + 'k\n'));
+
+require('./unpackBuild');

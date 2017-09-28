@@ -1,13 +1,14 @@
 {
   "name": "compromise-unpack",
-  "description": "",
-  "version": "0.0.1",
+  "description": "quickly convert a compressed nlp-compromise plugin to a usable form",
+  "version": "0.0.2",
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "repository": {
     "type": "git",
     "url": "git://github.com/spencermountain/compromise-plugin.git"
   },
   "main": "./builds/compromise-unpack.js",
+  "files": ["./builds"],
   "scripts": {},
   "dependencies": {
     "efrt-unpack": "^1.1.3"
