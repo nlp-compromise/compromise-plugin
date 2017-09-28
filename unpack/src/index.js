@@ -1,4 +1,3 @@
-// var jsfn = require('jsonfn').JSONfn;
 var efrtUnpack = require('efrt-unpack');
 
 var unpackPlurals = function(str) {

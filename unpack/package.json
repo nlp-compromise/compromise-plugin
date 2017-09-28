@@ -7,11 +7,11 @@
     "type": "git",
     "url": "git://github.com/spencermountain/compromise-plugin.git"
   },
-  "main": "./src/index.js",
+  "main": "./builds/compromise-unpack.js",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "efrt-unpack": "^1.1.3"
   },
+  "devDependencies": {},
   "license": "MIT"
 }
