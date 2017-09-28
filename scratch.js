@@ -2,6 +2,7 @@ const pack = require('./pack/src');
 const unpack = require('./unpack/src');
 
 var plugin = {
+  name: 'fun',
   words: {
     brontosaurus: 'Dinosaur',
     trex: 'Dinosaur'
@@ -18,16 +19,22 @@ var plugin = {
     '.osaurus$': 'Dinosaur',
     'uuu+': 'Exaggeration'
   },
+  plurals: {
+    horse: 'horses',
+    fly: 'flies',
+    jeep: 'jeeps',
+    one: 'one',
+  },
   postProcess: function(doc) {
     console.log('wee it works!')
-    // doc.match('#Adjective era').tag('#Date');
     return doc;
   }
 };
 
 let obj = pack(plugin);
-console.log(obj)
+// console.log(obj)
 
 let p2 = unpack(obj)
-console.log(p2 + '\n\n')
+console.log(JSON.stringify(p2, null, 2))
+console.log('\n\n')
 p2.postProcess()

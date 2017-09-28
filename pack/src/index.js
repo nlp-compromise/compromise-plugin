@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const sizeOf = require('object-sizeof');
 const efrt = require('efrt');
-const keyValue = require('./key-value');
+const plurals = require('./plurals');
 const jsfn = require('jsonfn').JSONfn;
 
 const filesize = function(obj) {
@@ -21,7 +21,7 @@ const packobj = function(obj) {
     obj.tags = JSON.stringify(obj.tags);
   }
   if (obj.plurals) {
-    obj.plurals = keyValue(obj.plurals);
+    obj.plurals = plurals(obj.plurals);
   }
 
   // if (obj.postProcess) {
