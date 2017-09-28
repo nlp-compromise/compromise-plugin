@@ -1,8 +1,8 @@
 var test = require('tape');
-const pack = require('../pack');
-const unpack = require('../unpack/src/index');
+var pack = require('../pack');
+var unpack = require('../unpack/src/index');
 
-let plugin = {
+var plugin = {
   name: 'tryplurals',
   plurals: {
     addendum: 'addenda',
@@ -29,14 +29,14 @@ let plugin = {
   }
 };
 test('pack-plurals', function(t) {
-  let str = pack(plugin);
-  let unpacked = unpack(str);
+  var str = pack(plugin);
+  var unpacked = unpack(str);
   t.deepEqual(plugin, unpacked, 'in==out');
   t.end();
 });
 
 test('packPlural-edge-cases', function(t) {
-  let input = {
+  var input = {
     name: 'tryplurals2',
     plurals: {
       aaaaaaa: 'aaaaaaa', //equal
@@ -45,8 +45,8 @@ test('packPlural-edge-cases', function(t) {
       a: 'a and some b' //spaces
     }
   };
-  let str = pack(input);
-  let output = unpack(str);
+  var str = pack(input);
+  var output = unpack(str);
   t.deepEqual(input, output, 'in==out');
   t.end();
 });

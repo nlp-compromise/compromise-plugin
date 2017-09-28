@@ -9,7 +9,8 @@
   },
   "main": "./builds/compromise-plugin.js",
   "bin": {
-    "compromise-pack": "./bin/pack.js"
+    "compromise-pack": "./bin/pack.js",
+    "compromise-unpack": "./bin/unpack.js"
   },
   "files": [
     "./builds"

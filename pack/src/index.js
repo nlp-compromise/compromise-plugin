@@ -1,21 +1,21 @@
-const chalk = require('chalk');
-const sizeOf = require('object-sizeof');
-const efrt = require('efrt');
-const plurals = require('./plurals');
-const jsfn = require('jsonfn').JSONfn;
+var chalk = require('chalk');
+var sizeOf = require('object-sizeof');
+var efrt = require('efrt');
+var plurals = require('./plurals');
+var jsfn = require('jsonfn').JSONfn;
 
-const filesize = function(obj) {
+var filesize = function(obj) {
   return sizeOf(obj) / 1000;
 };
 
-const packobj = function(input) {
+var packobj = function(input) {
   var obj = input
   // if (typeof input === 'string') {
   //   obj = eval('(' + input + ')');
   // }
   obj = obj || {};
 
-  let init = filesize(obj);
+  var init = filesize(obj);
   // console.log(chalk.blue('initial size:  - - ' + init + 'kb'));
 
   if (obj.words) {

@@ -53,8 +53,11 @@ let doc = nlp('i saw a HUUUUGE trex').debug()
 if you prefer, you can integrate **compromise-plugin** into your workflow from the command-line:
 ```bash
 npm i -g compromise-plugin
+#pack it..
+compromise-pack ./path/to/myPlugin.js | ./plugin.min.js
 
-compromise-plugin ./path/to/myPlugin.js | ./plugin.min.js
+#unpack it..
+compromise-unpack ./path/to/plugin.min.js
 ```
 
 ### Compatibility

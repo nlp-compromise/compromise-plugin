@@ -1,20 +1,20 @@
 //packs data in the form of {key:'value'}, where key + value have a shared prefix
-const normalize = function(str) {
+var normalize = function(str) {
   str = str.replace(/[,|]/g, '');
   return str;
 };
 
-const compareBoth = function(a, b) {
+var compareBoth = function(a, b) {
   a = normalize(a).split('');
   b = normalize(b).split('');
-  let common = [];
-  let suffA = [];
-  let suffB = [];
-  let len = a.length;
+  var common = [];
+  var suffA = [];
+  var suffB = [];
+  var len = a.length;
   if (b.length > a.length) {
     len = b.length;
   }
-  for (let i = 0; i < len; i++) {
+  for (var i = 0; i < len; i++) {
     if (a[i] === b[i]) {
       common.push(a[i]);
     } else {
@@ -23,7 +23,7 @@ const compareBoth = function(a, b) {
       break;
     }
   }
-  let str = common.join('');
+  var str = common.join('');
   if (suffA.length > 0) {
     str += '|' + suffA.join('');
   }
@@ -31,7 +31,7 @@ const compareBoth = function(a, b) {
   return str;
 };
 
-const packPlurals = function(obj) {
+var packPlurals = function(obj) {
   return Object.keys(obj)
     .map(k => {
       return compareBoth(k, obj[k]);
@@ -41,10 +41,10 @@ const packPlurals = function(obj) {
 
 module.exports = packPlurals;
 
-// let str = packPlurals({
+// var str = packPlurals({
 //   house: 'houses',
 //   matrix: 'matrices'
 // });
 // console.log(str);
-// const unpack = require('./unpack');
+// var unpack = require('./unpack');
 // console.log(unpack(str));

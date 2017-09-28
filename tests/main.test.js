@@ -1,6 +1,6 @@
 var test = require('tape');
-const pack = require('../pack');
-const unpack = require('../unpack/src/index');
+var pack = require('../pack');
+var unpack = require('../unpack/src/index');
 
 var plugin = {
   name: 'fun',
@@ -33,8 +33,8 @@ var plugin = {
 };
 
 test('test-all', function(t) {
-  let str = pack(plugin);
-  let unpacked = unpack(str);
+  var str = pack(plugin);
+  var unpacked = unpack(str);
   t.deepEqual(plugin, unpacked, 'in==out');
   t.ok(plugin.postProcess(true), 'postProcess runs');
   t.end();
