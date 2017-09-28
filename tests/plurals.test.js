@@ -1,7 +1,6 @@
 var test = require('tape');
-// var nlp = require('../lib/nlp');
 const pack = require('../pack');
-const unpack = require('../unpack');
+const unpack = require('../unpack/src/index');
 
 let plugin = {
   name: 'tryplurals',
@@ -29,7 +28,6 @@ let plugin = {
     zero: 'zeros'
   }
 };
-
 test('pack-plurals', function(t) {
   let str = pack(plugin);
   let unpacked = unpack(str);
@@ -50,6 +48,5 @@ test('packPlural-edge-cases', function(t) {
   let str = pack(input);
   let output = unpack(str);
   t.deepEqual(input, output, 'in==out');
-
   t.end();
 });

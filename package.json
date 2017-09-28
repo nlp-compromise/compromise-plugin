@@ -10,6 +10,6 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
-    "efrt-unpack": "^1.1.1"
+    "efrt-unpack": "^1.1.3"
   }
 }

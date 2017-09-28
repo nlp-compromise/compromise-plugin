@@ -12,7 +12,7 @@ const packobj = function(obj) {
   obj = obj || {};
 
   let init = filesize(obj);
-  console.log(chalk.blue('initial size:  - - ' + init + 'kb'));
+  // console.log(chalk.blue('initial size:  - - ' + init + 'kb'));
 
   if (obj.words) {
     obj.words = efrt.pack(obj.words);

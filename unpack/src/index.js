@@ -19,13 +19,15 @@ const unpack = function(obj) {
   if (typeof obj === 'string') {
     obj = JSON.parse(obj);
   }
-  //use efrt to unpack words
-  obj.words = efrtUnpack(obj.words)
-
-  //obj.tags is just stringified
+  //words is packed with efrt
+  if (obj.words && typeof obj.words === 'string') {
+    obj.words = efrtUnpack(obj.words)
+  }
+  //tags are just stringified
   if (obj.tags && typeof obj.tags === 'string') {
     obj.tags = JSON.parse(obj.tags);
   }
+
   //plurals is packed in a weird way
   if (obj.plurals && typeof obj.plurals === 'string') {
     obj.plurals = unpackPlurals(obj.plurals)
