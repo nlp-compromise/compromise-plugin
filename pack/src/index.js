@@ -2,7 +2,7 @@ const chalk = require('chalk');
 const sizeOf = require('object-sizeof');
 const efrt = require('efrt');
 const keyValue = require('./key-value');
-const uglify = require('./uglify-code');
+const jsfn = require('jsonfn').JSONfn;
 
 const filesize = function(obj) {
   return sizeOf(obj) / 1000;
@@ -24,10 +24,11 @@ const packobj = function(obj) {
     obj.plurals = keyValue(obj.plurals);
   }
 
-  if (obj.postProcess) {
-    obj.postProcess = uglify(obj.postProcess);
-  }
-  return JSON.stringify(obj, null, 2);
+  // if (obj.postProcess) {
+  //   obj.postProcess = uglify(obj.postProcess);
+  //   console.log(uglify(obj.postProcess))
+  // }
+  return obj
 };
 
 module.exports = packobj;

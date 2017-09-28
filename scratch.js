@@ -19,10 +19,15 @@ var plugin = {
     'uuu+': 'Exaggeration'
   },
   postProcess: function(doc) {
-    doc.match('#Adjective era').tag('#Date');
+    console.log('wee it works!')
+    // doc.match('#Adjective era').tag('#Date');
     return doc;
   }
 };
 
-let str = pack(plugin);
-console.log(unpack(str));
+let obj = pack(plugin);
+console.log(obj)
+
+let p2 = unpack(obj)
+console.log(p2 + '\n\n')
+p2.postProcess()
