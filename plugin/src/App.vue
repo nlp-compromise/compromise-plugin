@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-  <textarea v-model="plugin" placeholder="{}"></textarea>
-  <textarea v-model="plugin" placeholder="{}"></textarea>
+  <textarea v-model="unpacked" placeholder="{}"></textarea>
+  <textarea v-model="packed" placeholder="{}"></textarea>
 </div>
 </template>
 
 <script>
-var nlpPlugin=require('/Users/spencer/nlp/plugin');
-console.log(nlpPlugin)
+var nlpPlugin=require('/Users/spencer/Desktop/compromise-plugin/index.js');
+var placeholder=require('./plugin');
 export default {
   name: 'app',
   methods:{},
   data () {
-    let plugin={
-      plugin:{
-        words:{
-          strawberry: 'Fruit',
-          blueberry: 'Fruit',
-          blackberry: 'Fruit',
-          tomato: ['Fruit', 'Vegetable'],
-          cucumber: 'Vegetable',
-          pepper: ['Vegetable', 'Spicy'],
-          salad: ['Fruit', 'Vegetable']
-        }
-      }
+    return{
+      plugin:placeholder
     }
-    return {
-      plugin:JSON.stringify(plugin, null,2)
+  },
+  computed:{
+    packed:function(){
+      let str=JSON.stringify( nlpPlugin.pack(this.plugin),null,2)
+      return str
+    },
+    unpacked:{
+      get:function(){
+        return JSON.stringify(this.plugin, null,2)
+      },
+      set:function(obj){
+        console.log(obj)
+        this.plugin=obj
+      }
     }
   }
 }
