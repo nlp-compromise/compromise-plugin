@@ -17,13 +17,15 @@
   ],
   "scripts": {
     "test": "\"node_modules/.bin/tape\" \"./tests/*.test.js\" | \"node_modules/.bin/tap-spec\" --color",
-    "build":"node ./scripts/build.js",
-    "watch":"node ./scratch.js"
+    "build": "node ./scripts/build.js",
+    "watch": "./node_modules/.bin/amble ./scratch.js "
   },
   "dependencies": {
+    "amble": "0.0.4",
     "chalk": "^2.1.0",
-    "efrt": "^1.1.1",
+    "efrt": "^2.0.1",
     "hanson": "^1.2.0",
+    "jsonfn": "^0.31.0",
     "object-sizeof": "^1.2.0"
   },
   "devDependencies": {

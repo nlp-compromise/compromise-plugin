@@ -1,40 +1,51 @@
-const pack = require('./pack/src');
-const unpack = require('./unpack/src');
+const plg = require('./src/index')
 
 var plugin = {
-  name: 'fun',
+  name: "food-plugin",
   words: {
-    brontosaurus: 'Dinosaur',
-    trex: 'Dinosaur'
+    strawberry: 'Fruit',
+    blueberry: 'Fruit',
+    raspberry: 'Fruit',
+    banana: 'Fruit',
+    tomato: ['Fruit', 'Vegetable'],
+    cucumber: 'Vegetable',
+    pepper: ['Vegetable', 'Spicy'],
+    salad: ['Fruit', 'vegetable']
   },
-  tags: {
-    Dinosaur: {
-      isA: 'Animal'
-    },
-    Animal: {
-      isA: 'Noun'
-    }
-  },
-  regex: {
-    '.osaurus$': 'Dinosaur',
-    'uuu+': 'Exaggeration'
-  },
-  plurals: {
-    horse: 'horses',
-    fly: 'flies',
-    jeep: 'jeeps',
-    one: 'one',
-  },
-  postProcess: function(doc) {
-    console.log('wee it works!')
-    return doc;
-  }
-};
+  // "tags": {
+  //   "Food": {
+  //     "isA": "Noun"
+  //   },
+  //   "Fruit": {
+  //     "isA": "Food"
+  //   },
+  //   "Vegetable": {
+  //     "isA": "Food"
+  //   }
+  // },
+  // "regex": {
+  //   ".{3}sauce$": 'Food',
+  //   ".peritif$": 'Food'
+  // },
+  // "patterns": {
+  //   "#Singular (cake|pie|pudding)": 'Dessert',
+  //   "#Cardinal #Unit of [#Noun]": 'Food',
+  //   "(chopped|fried|peeled) #Noun": 'Food'
+  // },
+  // plurals: {
+  //   apricot: 'apricots',
+  //   banana: 'bananas',
+  //   loaf: 'loaves',
+  //   tooth: 'teeth',
+  //   fruit: 'fruit'
+  // },
 
-let obj = pack(plugin);
-console.log(obj)
+}
 
-let p2 = unpack(obj)
-console.log(JSON.stringify(p2, null, 2))
-console.log('\n\n')
-p2.postProcess()
+let str = plg.pack(plugin);
+console.log(str)
+
+// let p2 = unpack(obj)
+// console.log(JSON.stringify(p2, null, 2))
+// console.log('\n\n')
+// p2.postProcess()
