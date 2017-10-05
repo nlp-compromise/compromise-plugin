@@ -23,14 +23,10 @@ var plugin = {
 			isA: 'Noun'
 		}
 	},
-	rules: {
+	regex: {
 		'.osaurus$': 'Dinosaur',
 		'uuu+': 'Exaggeration'
-	},
-  postProcess: (doc)=>{
-    doc.match('#Adjective era').tag('#Date')
-    return doc
-  }
+	}
 };
 
 var pack = require('compromise-plugin');
@@ -48,6 +44,9 @@ let doc = nlp('i saw a HUUUUGE trex').debug()
 	'trex'        - Dinosaur, Animal, Noun, Singular
 */
 ```
+
+the cool thing about this process is that the pack() step can be as slow as we'd like.
+It can do all-sorts of laborious things up-front, to ensure the plugin can 'pop' back into uncompressed form very quickly.
 
 ### CLI
 if you prefer, you can integrate **compromise-plugin** into your workflow from the command-line:

@@ -9,8 +9,6 @@ var verbs = require('./verbs');
 var plurals = require('./packPlurals');
 
 
-
-
 var pack = function(obj) {
   if (obj.words) {
     obj.words = efrt.pack(obj.words);

@@ -1,12 +1,12 @@
 //supported verb forms:
 const forms = [
-  'pastTense',
-  'presentTense',
-  'gerund',
-  'participle',
+  'PastTense',
+  'PresentTense',
+  'Gerund',
+  'Participle',
 ]
 //find the shared substring between the two forms
-const prefix = function(inf, str) {
+const substring = function(inf, str) {
   for (let k = 0; k < inf.length; k++) {
     if (str.length <= k || inf[k] !== str[k]) {
       // console.log(str.substr(0, k))
@@ -17,36 +17,43 @@ const prefix = function(inf, str) {
 }
 
 //find similarities between conjugations
-const press = function(arr) {
+const findPrefix = function(arr) {
   //find the always-shared prefix (if there is one)
   let inf = arr[0]
   let len = inf.length
   let found = false
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] !== undefined) {
-      let pref = prefix(inf, arr[i])
-      if (pref > 1 && pref <= len) {
+      //a conjugation smaller than our prefix..
+      if (arr[i].length < inf.length) {
+        len = arr[i].length
+      }
+      let pref = substring(inf, arr[i])
+      if (pref <= len) {
         found = true
         len = pref
       }
     }
   }
+  //don't compress nothin'
   if (!found) {
     len = 0
   }
-
-  let substr = inf.substr(0, len)
-  let res = substr + ':'
-  for (let i = 0; i < arr.length; i++) {
-    if (!arr[i]) {
-      res += ','
-    } else {
-      res += arr[i].substr(len, arr[1].length + 1) + ','
-    }
-  }
-  return res
+  //ok, turn it into a string with one shared prefix
+  return inf.substr(0, len)
 }
 
+const pack = function(arr, prefix) {
+  return arr.map((str) => {
+    if (str === undefined) {
+      return ''
+    }
+    if (str === prefix) {
+      return '_'
+    }
+    return str.substr(prefix.length, str.length)
+  })
+}
 
 const packVerbs = function(verbs) {
   let list = Object.keys(verbs).map((k) => {
@@ -61,7 +68,9 @@ const packVerbs = function(verbs) {
         break
       }
     }
-    const str = press(arr)
+    let prefix = findPrefix(arr)
+    arr = pack(arr, prefix)
+    var str = prefix + ':' + arr.join(',')
     return str
   })
   return list.join('|')

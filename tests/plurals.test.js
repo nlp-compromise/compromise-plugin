@@ -1,5 +1,5 @@
 var test = require('tape');
-var both = require('../');
+var both = require('../src');
 var pack = both.pack
 var unpack = both.unpack
 

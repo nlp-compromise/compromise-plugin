@@ -1,6 +1,7 @@
 var test = require('tape');
-var pack = require('../pack');
-var unpack = require('../unpack');
+var both = require('../src');
+var pack = both.pack
+var unpack = both.unpack
 
 var plugin = {
   name: 'fun',
