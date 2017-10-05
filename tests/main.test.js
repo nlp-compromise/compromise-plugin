@@ -26,10 +26,6 @@ var plugin = {
     fly: 'flies',
     jeep: 'jeeps',
     one: 'one',
-  },
-  postProcess: function(doc) {
-    console.log('wee it works!')
-    return doc;
   }
 };
 
@@ -37,6 +33,6 @@ test('test-all', function(t) {
   var str = pack(plugin);
   var unpacked = unpack(str);
   t.deepEqual(plugin, unpacked, 'in==out');
-  t.ok(plugin.postProcess(true), 'postProcess runs');
+  // t.ok(plugin.postProcess(true), 'postProcess runs');
   t.end();
 });

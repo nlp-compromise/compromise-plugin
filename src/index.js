@@ -3,6 +3,7 @@
 // var chalk = require('chalk');
 // var sizeOf = require('object-sizeof');
 var efrt = require('efrt');
+var unpack = require('../unpack')
 // var packWords = require('./packWords');
 var keyValue = require('./key-value');
 var verbs = require('./verbs');
@@ -10,6 +11,7 @@ var plurals = require('./packPlurals');
 
 
 var pack = function(obj) {
+  obj = Object.assign({}, obj)
   if (obj.words) {
     obj.words = efrt.pack(obj.words);
   }
@@ -30,5 +32,6 @@ var pack = function(obj) {
 
 module.exports = {
   pack: pack,
+  unpack: unpack
 // unpack: compromise.unpack,
 };

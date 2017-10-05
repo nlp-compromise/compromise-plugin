@@ -1,6 +1,1 @@
-{ name: 'fun',
-  words: '{"Dinosaur":"brontosaurus,trex"}',
-  tags: '{"Dinosaur":{"isA":"Animal"},"Animal":{"isA":"Noun"}}',
-  regex: { '.osaurus$': 'Dinosaur', 'uuu+': 'Exaggeration' },
-  plurals: 'horse|s,fl|y|ies,jeep|s,one|',
-  postProcess: function(){console.log('cool!')} }
+{"name":"fun","words":"Dinosaur¦brontosaurus,trex","tags":{"Dinosaur":{"isA":"Animal"},"Animal":{"isA":"Noun"}},"regex":{"Dinosaur":[".osaurus$"],"Exaggeration":["uuu+"]},"plurals":"horse|s,fl|y|ies,jeep|s,one|"}

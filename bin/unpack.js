@@ -1,4 +1,5 @@
-var unpack = require('../unpack');
+#!/usr/bin/env node
+var unpack = require('../src').unpack
 var fs = require('fs');
 
 let file = process.argv[2]

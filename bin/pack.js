@@ -1,4 +1,5 @@
-var pack = require('../pack');
+#!/usr/bin/env node
+var pack = require('../src').pack;
 var fs = require('fs');
 
 let file = process.argv[2]
@@ -8,5 +9,5 @@ if (!file) {
 
 fs.readFile(file, (err, r) => {
   let str = r.toString()
-  console.log(pack(str))
+  console.log(pack(JSON.parse(str)))
 })
