@@ -1,9 +1,9 @@
 // var compromise = require('compromise');
-// var compromise = require('/Users/spencer/nlp/nlp-compromise');
+var nlp = require('/Users/spencer/nlp/nlp-compromise/src');
 // var chalk = require('chalk');
 // var sizeOf = require('object-sizeof');
 var efrt = require('efrt');
-var unpack = require('../unpack')
+// var unpack = require('../unpack')
 // var packWords = require('./packWords');
 var keyValue = require('./key-value');
 var verbs = require('./verbs');
@@ -32,6 +32,5 @@ var pack = function(obj) {
 
 module.exports = {
   pack: pack,
-  unpack: unpack
-// unpack: compromise.unpack,
+  unpack: nlp.unpack,
 };

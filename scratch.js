@@ -1,5 +1,4 @@
 const plg = require('./src/index')
-const unpack = require('./unpack')
 var plugin = {
   name: "food-plugin",
   words: {
@@ -84,8 +83,9 @@ plugin = {
   }
 };
 let str = plg.pack(plugin);
-console.log(str)
-console.log(unpack(str))
+// console.log(str)
+console.log('\n\n')
+console.log(plg.unpack(str))
 
 // let p2 = unpack(obj)
 // console.log(JSON.stringify(p2, null, 2))
