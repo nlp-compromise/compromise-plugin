@@ -1,3 +1,4 @@
+// const plg = require('./builds/compromise-plugin.js')
 const plg = require('./src/index')
 var plugin = {
   name: "food-plugin",
