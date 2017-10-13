@@ -3,10 +3,16 @@
 // into a 'value:[key, key]' format
 const keyValue = function(obj) {
   obj = Object.keys(obj).reduce((h, k) => {
-    if (h[obj[k]] === undefined) {
-      h[obj[k]] = []
+    if (typeof obj[k] === 'string') {
+      h[obj[k]] = h[obj[k]] || []
+      h[obj[k]].push(k)
+    } else {
+      //handle values as an array
+      obj[k].forEach((key) => {
+        h[key] = h[key] || []
+        h[key].push(k)
+      })
     }
-    h[obj[k]].push(k)
     return h;
   }, {});
   return obj

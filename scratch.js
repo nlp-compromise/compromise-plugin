@@ -59,29 +59,30 @@ var plugin = {
 
 }
 plugin = {
-  name: 'fun',
-  words: {
-    brontosaurus: 'Dinosaur',
-    trex: 'Dinosaur'
-  },
-  tags: {
-    Dinosaur: {
-      isA: 'Animal'
-    },
-    Animal: {
-      isA: 'Noun'
-    }
-  },
+  // name: 'fun',
+  // words: {
+  //   brontosaurus: 'Dinosaur',
+  //   trex: 'Dinosaur'
+  // },
+  // tags: {
+  //   Dinosaur: {
+  //     isA: 'Animal'
+  //   },
+  //   Animal: {
+  //     isA: 'Noun'
+  //   }
+  // },
   regex: {
-    '.osaurus$': 'Dinosaur',
-    'uuu+': 'Exaggeration'
+    // '.osaurus$': 'Dinosaur',
+    '.osaurus$': ['Dinosaur', 'Animal'],
+  // 'uuu+': 'Exaggeration'
   },
-  plurals: {
-    horse: 'horses',
-    fly: 'flies',
-    jeep: 'jeeps',
-    one: 'one',
-  }
+// plurals: {
+//   horse: 'horses',
+//   fly: 'flies',
+//   jeep: 'jeeps',
+//   one: 'one',
+// }
 };
 let str = plg.pack(plugin);
 // console.log(str)

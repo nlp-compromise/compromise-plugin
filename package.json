@@ -1,20 +1,17 @@
 {
   "name": "compromise-plugin",
   "description": "author and compress nlp-compromise plugins",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "repository": {
     "type": "git",
     "url": "git://github.com/nlp-compromise/compromise-plugin.git"
   },
-  "main": "./builds/compromise-plugin.js",
+  "main": "./src/index.js",
   "bin": {
     "compromise-pack": "./bin/pack.js",
     "compromise-unpack": "./bin/unpack.js"
   },
-  "files": [
-    "./builds"
-  ],
   "scripts": {
     "test": "\"node_modules/.bin/tape\" \"./tests/*.test.js\" | \"node_modules/.bin/tap-spec\" --color",
     "build": "node ./scripts/build.js",
