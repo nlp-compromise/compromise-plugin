@@ -1,4 +1,4 @@
-// var compromise = require('compromise');
+// var nlp = require('compromise');
 var nlp = require('/Users/spencer/nlp/nlp-compromise/src');
 // var chalk = require('chalk');
 // var sizeOf = require('object-sizeof');

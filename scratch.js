@@ -85,9 +85,9 @@ plugin = {
 // }
 };
 let str = plg.pack(plugin);
-// console.log(str)
+console.log(str)
 console.log('\n\n')
-console.log(plg.unpack(str))
+// console.log(plg.unpack(str))
 
 // let p2 = unpack(obj)
 // console.log(JSON.stringify(p2, null, 2))
