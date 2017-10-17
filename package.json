@@ -1,7 +1,7 @@
 {
   "name": "compromise-plugin",
   "description": "author and compress nlp-compromise plugins",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "watch": "./node_modules/.bin/amble ./scratch.js "
   },
   "dependencies": {
-    "compromise": "^10.7.2",
+    "compromise": "^11.0.0",
     "efrt": "^2.0.3"
   },
   "devDependencies": {

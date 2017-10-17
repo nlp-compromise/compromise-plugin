@@ -1,14 +1,8 @@
-// var nlp = require('compromise');
-var nlp = require('/Users/spencer/nlp/nlp-compromise/src');
-// var chalk = require('chalk');
-// var sizeOf = require('object-sizeof');
+var nlp = require('compromise');
 var efrt = require('efrt');
-// var unpack = require('../unpack')
-// var packWords = require('./packWords');
 var keyValue = require('./key-value');
 var verbs = require('./verbs');
 var plurals = require('./packPlurals');
-
 
 var pack = function(obj) {
   obj = Object.assign({}, obj)

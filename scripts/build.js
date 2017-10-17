@@ -13,6 +13,9 @@ var fileSize = function(src) {
   return (stats['size'] / 1000.0).toFixed(2);
 };
 
+//cleanup. remove old builds
+exec('rm -rf ./builds && mkdir builds');
+
 console.log(chalk.yellow(' 🕑 creating full build..'));
 
 var banner = '/* compromise-plugin v' + pkg.version + '\n   github.com/nlp-compromise/compromise-plugin\n   MIT\n*/\n';
