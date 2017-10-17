@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-  <textarea v-model="unpacked" placeholder="{}"></textarea>
-  <textarea v-model="packed" placeholder="{}"></textarea>
-</div>
+    <div class="col">
+      <div>a big
+        <a href="https://github.com/nlp-compromise/compromise-plugin">Compromise plugin</a>
+      </div>
+      <textarea v-model="unpacked" placeholder="{}"></textarea>
+    </div>
+    <div class="col">
+      <div>a tiny, compressed version</div>
+      <textarea v-model="packed" placeholder="{}"></textarea>
+    </div>
+  </div>
 </template>
 
 <script>
-var nlpPlugin=require('/Users/spencer/Desktop/compromise-plugin/index.js');
+var nlpPlugin=require('compromise-plugin');
 var placeholder=require('./plugin');
 export default {
   name: 'app',
@@ -42,9 +50,12 @@ export default {
   text-align: center;
   margin:0px;
   padding:0px;
-  width:100%;
   height:100vh;
+  width:100%;
   display:flex;
+}
+.col{
+  width:50vw;
 }
 textarea{
   width:80%;
