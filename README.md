@@ -3,6 +3,9 @@
   <h4>
     make a plugin for <b><a href="https://github.com/nlp-compromise/compromise">compromise</a></b>
   </h4>
+  <a href="https://npmjs.org/package/compromise-plugin">
+    <img src="https://img.shields.io/npm/v/compromise-plugin.svg?style=flat-square" />
+  </a>
 </div>
 <b>compromise</b> works by compressing its data in lots of weird ways.
 With <b>compromise-plugin</b>, you can ship thousands, or tens-of-thousands of custom words and patterns to the client-side, for any natural-language-processing behaviour you'd like.
@@ -11,22 +14,22 @@ With <b>compromise-plugin</b>, you can ship thousands, or tens-of-thousands of c
 //take this plugin,
 var plugin = {
   name:'compromise-dinosaur',
-	words: {
-		brontosaurus:'Dinosaur',
-		trex: 'Dinosaur'
-	},
-	tags: {
-		Dinosaur: {
-			isA: 'Animal'
-		},
-		Animal: {
-			isA: 'Noun'
-		}
-	},
-	regex: {
-		'.osaurus$': 'Dinosaur',
-		'uuu+': 'Exaggeration'
-	}
+  words: {
+    brontosaurus:'Dinosaur',
+    trex: 'Dinosaur'
+  },
+  tags: {
+    Dinosaur: {
+      isA: 'Animal'
+    },
+    Animal: {
+      isA: 'Noun'
+    }
+  },
+  regex: {
+    '.osaurus$': 'Dinosaur',
+    'uuu+': 'Exaggeration'
+  }
 };
 
 var pack = require('compromise-plugin');
@@ -37,11 +40,11 @@ var tinyPlugin= pack(plugin) //CRAZY_SMALL!
 nlp.plugin(tinyPlugin);
 let doc = nlp('i saw a HUUUUGE trex').debug()
 /*
-	'i'           - Pronoun, Noun, Singular
-	'saw'         - PastTense, Verb, VerbPhrase
-	'a'           - Determiner
-	'HUUUUGE'     - Exaggeration
-	'trex'        - Dinosaur, Animal, Noun, Singular
+  'i'           - Pronoun, Noun, Singular
+  'saw'         - PastTense, Verb, VerbPhrase
+  'a'           - Determiner
+  'HUUUUGE'     - Exaggeration
+  'trex'        - Dinosaur, Animal, Noun, Singular
 */
 ```
 
