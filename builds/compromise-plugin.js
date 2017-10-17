@@ -13135,15 +13135,10 @@ module.exports = unpack;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],3:[function(_dereq_,module,exports){
 var nlp = _dereq_('compromise');
-// var chalk = require('chalk');
-// var sizeOf = require('object-sizeof');
 var efrt = _dereq_('efrt');
-// var unpack = require('../unpack')
-// var packWords = require('./packWords');
 var keyValue = _dereq_('./key-value');
 var verbs = _dereq_('./verbs');
 var plurals = _dereq_('./packPlurals');
-
 
 var pack = function(obj) {
   obj = Object.assign({}, obj)

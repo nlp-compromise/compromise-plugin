@@ -1,13 +1,13 @@
 {
   "name": "compromise-plugin",
   "description": "author and compress nlp-compromise plugins",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "repository": {
     "type": "git",
     "url": "git://github.com/nlp-compromise/compromise-plugin.git"
   },
-  "main": "./src/index.js",
+  "main": "./builds/compromise-plugin.js",
   "bin": {
     "compromise-pack": "./bin/pack.js",
     "compromise-unpack": "./bin/unpack.js"
