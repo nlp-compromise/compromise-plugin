@@ -12,7 +12,8 @@
   "dependencies": {
     "@tweenjs/tween.js": "^17.1.1",
     "compromise-plugin": "0.0.6",
-    "vue": "^2.0.1"
+    "vue": "^2.0.1",
+    "vue-codemirror": "^3.1.8"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
