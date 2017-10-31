@@ -37167,6 +37167,7 @@ exports.default = {
       try {
         plugin = JSON.parse(obj);
         this.packed = (0, _stringify2.default)(nlpPlugin.pack(plugin), null, 2);
+        this.valid = true;
       } catch (e) {
         this.valid = false;
         this.packed = e;

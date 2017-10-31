@@ -52,6 +52,7 @@ export default {
       try{
          plugin=JSON.parse(obj)
          this.packed=JSON.stringify( nlpPlugin.pack(plugin),null,2)
+         this.valid=true
       }catch(e){
         this.valid=false
         this.packed=e
