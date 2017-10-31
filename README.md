@@ -67,4 +67,24 @@ the compromise plugin spec will change over time, and to avoid having to remembe
 
 so if you want a plugin to work with comprimise v12, publish it with `compromise-plugin@12.*.*`
 
+##Other examples
+```js
+//military-words
+{
+  plurals:{
+    barracks:'barracks'
+  },
+  patterns:{
+    "#Ordinal infantry? division":'Noun',
+    "major (general|lieutenant|#Person)":'Person',
+    "#Posessive six":'Noun',
+    "over$":'Expression'
+  },
+  words:{
+    'niner':'Value',
+    'buck sergeant':'Person'
+  }
+}
+```
+
 MIT
