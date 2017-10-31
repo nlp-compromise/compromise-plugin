@@ -67,7 +67,7 @@ the compromise plugin spec will change over time, and to avoid having to remembe
 
 so if you want a plugin to work with comprimise v12, publish it with `compromise-plugin@12.*.*`
 
-##Other examples
+## Other examples
 ```js
 //military-words
 {
