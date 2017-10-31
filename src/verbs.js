@@ -1,13 +1,13 @@
 //supported verb forms:
-const forms = [
+var forms = [
   'PastTense',
   'PresentTense',
   'Gerund',
   'Participle',
 ]
 //find the shared substring between the two forms
-const substring = function(inf, str) {
-  for (let k = 0; k < inf.length; k++) {
+var substring = function(inf, str) {
+  for (var k = 0; k < inf.length; k++) {
     if (str.length <= k || inf[k] !== str[k]) {
       // console.log(str.substr(0, k))
       return k
@@ -17,18 +17,18 @@ const substring = function(inf, str) {
 }
 
 //find similarities between conjugations
-const findPrefix = function(arr) {
+var findPrefix = function(arr) {
   //find the always-shared prefix (if there is one)
-  let inf = arr[0]
-  let len = inf.length
-  let found = false
-  for (let i = 1; i < arr.length; i++) {
+  var inf = arr[0]
+  var len = inf.length
+  var found = false
+  for (var i = 1; i < arr.length; i++) {
     if (arr[i] !== undefined) {
       //a conjugation smaller than our prefix..
       if (arr[i].length < inf.length) {
         len = arr[i].length
       }
-      let pref = substring(inf, arr[i])
+      var pref = substring(inf, arr[i])
       if (pref <= len) {
         found = true
         len = pref
@@ -43,7 +43,7 @@ const findPrefix = function(arr) {
   return inf.substr(0, len)
 }
 
-const pack = function(arr, prefix) {
+var pack = function(arr, prefix) {
   return arr.map((str) => {
     if (str === undefined) {
       return ''
@@ -55,20 +55,20 @@ const pack = function(arr, prefix) {
   })
 }
 
-const packVerbs = function(verbs) {
-  let list = Object.keys(verbs).map((k) => {
-    let arr = [k]
-    for (let i = 0; i < forms.length; i++) {
+var packVerbs = function(verbs) {
+  var list = Object.keys(verbs).map((k) => {
+    var arr = [k]
+    for (var i = 0; i < forms.length; i++) {
       arr.push(verbs[k][forms[i]])
     }
     //remove the empty tail
-    for (let i = arr.length; i > 0; i--) {
+    for (var i = arr.length; i > 0; i--) {
       if (arr[i] !== undefined) {
         arr = arr.slice(0, i + 1)
         break
       }
     }
-    let prefix = findPrefix(arr)
+    var prefix = findPrefix(arr)
     arr = pack(arr, prefix)
     var str = prefix + ':' + arr.join(',')
     return str

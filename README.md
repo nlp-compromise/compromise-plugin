@@ -38,7 +38,7 @@ var tinyPlugin= pack(plugin) //CRAZY_SMALL!
 
 //then load it in nlp-compromise (it unpacks automatically)
 nlp.plugin(tinyPlugin);
-let doc = nlp('i saw a HUUUUGE trex').debug()
+var doc = nlp('i saw a HUUUUGE trex').debug()
 /*
   'i'           - Pronoun, Noun, Singular
   'saw'         - PastTense, Verb, VerbPhrase

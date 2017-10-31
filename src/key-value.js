@@ -1,7 +1,7 @@
 
 //pivot category-like data (key-vals with frequently shared values)
 // into a 'value:[key, key]' format
-const keyValue = function(obj) {
+var keyValue = function(obj) {
   obj = Object.keys(obj).reduce((h, k) => {
     if (typeof obj[k] === 'string') {
       h[obj[k]] = h[obj[k]] || []

@@ -1,5 +1,5 @@
-// const plg = require('./builds/compromise-plugin.js')
-const plg = require('./src/index')
+// var plg = require('./builds/compromise-plugin.js')
+var plg = require('./src/index')
 var plugin = {
   name: "food-plugin",
   words: {
@@ -84,12 +84,12 @@ plugin = {
 //   one: 'one',
 // }
 };
-let str = plg.pack(plugin);
+var str = plg.pack(plugin);
 console.log(str)
 console.log('\n\n')
 // console.log(plg.unpack(str))
 
-// let p2 = unpack(obj)
+// var p2 = unpack(obj)
 // console.log(JSON.stringify(p2, null, 2))
 // console.log('\n\n')
 // p2.postProcess()
