@@ -4,12 +4,15 @@
 .cm-s-spencertheme {
   padding: 10px;
   cursor: text;
+	border:2px solid darkgrey;
+	border-radius:7px;
 }
 .cm-s-spencertheme.CodeMirror {
   background: white;
   color: grey;
   font-size: 13px;
-  height: auto;
+  height:100%;
+  /*height: auto;*/
   max-width: 800px;
 }
 .cm-s-spencertheme div.CodeMirror-selected {
