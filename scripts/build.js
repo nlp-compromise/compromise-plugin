@@ -2,7 +2,6 @@ const fs = require('fs')
 const exec = require('shelljs').exec
 const chalk = require('chalk')
 const pkg = require('../package.json')
-var fs = require('fs')
 
 const browserify = '"node_modules/.bin/browserify"'
 const derequire = '"node_modules/.bin/derequire"'

@@ -1,7 +1,7 @@
 {
   "name": "compromise-plugin",
   "description": "author and compress nlp-compromise plugins",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
   "repository": {
     "type": "git",
