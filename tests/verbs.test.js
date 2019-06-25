@@ -1,9 +1,9 @@
-var test = require('tape');
-var both = require('../src');
-var pack = both.pack
-var unpack = both.unpack
+const test = require('tape')
+const both = require('../src')
+const pack = both.pack
+const unpack = both.unpack
 
-var plugin = {
+const plugin = {
   name: 'tryverbs',
   conjugations: {
     hear: {
@@ -167,15 +167,15 @@ var plugin = {
     },
     think: {
       PastTense: 'thought'
-    },
+    }
   }
-};
+}
 test('pack-verbs', function(t) {
-  var str = pack(plugin);
-  var unpacked = unpack(str);
-  t.deepEqual(plugin, unpacked, 'in==out');
+  const str = pack(plugin)
+  const unpacked = unpack(str)
+  t.deepEqual(plugin, unpacked, 'in==out')
   t.equal(plugin.conjugations.tell.PastTense, unpacked.conjugations.tell.PastTense, 'tell-told')
   t.equal(plugin.conjugations.swim.PastTense, unpacked.conjugations.swim.PastTense, 'swim-swam')
   t.equal(plugin.conjugations.swim.Gerund, unpacked.conjugations.swim.Gerund, 'swim-swimming')
-  t.end();
-});
+  t.end()
+})

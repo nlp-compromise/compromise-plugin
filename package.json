@@ -17,21 +17,30 @@
     "build": "node ./scripts/build.js",
     "watch": "./node_modules/.bin/amble ./scratch.js "
   },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "peerDependencies": {
+    "compromise": "^11.0.0"
+  },
   "dependencies": {
-    "compromise": "^11.0.0",
     "efrt": "^2.0.3"
   },
   "devDependencies": {
-    "amble": "0.0.4",
+    "amble": "0.0.7",
     "babel-preset-es2015": "^6.24.1",
-    "browserify": "^14.4.0",
+    "browserify": "16.2.3",
     "chalk": "^2.1.0",
     "derequire": "^2.0.6",
-    "shelljs": "^0.7.8",
-    "tap-spec": "^4.1.1",
+    "shelljs": "0.8.3",
+    "tap-spec": "5.0.0",
     "tape": "^4.8.0",
     "uglify-js": "^3.1.4",
-    "uglifyify": "^4.0.4"
+    "uglifyify": "5.0.1"
   },
   "license": "MIT"
 }

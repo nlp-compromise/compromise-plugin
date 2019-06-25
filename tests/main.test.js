@@ -1,9 +1,9 @@
-var test = require('tape');
-var both = require('../src');
-var pack = both.pack
-var unpack = both.unpack
+const test = require('tape')
+const both = require('../src')
+const pack = both.pack
+const unpack = both.unpack
 
-var plugin = {
+const plugin = {
   name: 'fun',
   words: {
     brontosaurus: 'Dinosaur',
@@ -25,14 +25,14 @@ var plugin = {
     horse: 'horses',
     fly: 'flies',
     jeep: 'jeeps',
-    one: 'one',
+    one: 'one'
   }
-};
+}
 
 test('test-all', function(t) {
-  var str = pack(plugin);
-  var unpacked = unpack(str);
-  t.deepEqual(plugin, unpacked, 'in==out');
+  const str = pack(plugin)
+  const unpacked = unpack(str)
+  t.deepEqual(plugin, unpacked, 'in==out')
   // t.ok(plugin.postProcess(true), 'postProcess runs');
-  t.end();
-});
+  t.end()
+})
