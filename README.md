@@ -1,3 +1,9 @@
+
+### This repo is deprecated, and is for compromise < v12.
+### for the current plugin scheme, see [here](https://observablehq.com/@spencermountain/compromise-plugins)
+
+---
+
 <div align="center">
   <h4>:sunglasses::sunglasses::sunglasses::sunglasses:</h4>
   <h4>
